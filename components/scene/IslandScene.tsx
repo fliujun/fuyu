@@ -141,12 +141,16 @@ function MobileIslandButton({
 
 export function IslandScene({ selectedProductId, onSelectProduct, onOpenAbout, onOpenOpening }: IslandSceneProps) {
   return (
-    <section id="island-scene" className="island-section relative h-[100svh] overflow-hidden px-5 py-5 sm:px-10 lg:px-16" aria-labelledby="island-title">
+    <section
+      id="island-scene"
+      className="island-section relative h-[100dvh] overflow-y-auto px-5 pb-[calc(env(safe-area-inset-bottom)+1.5rem)] pt-[calc(env(safe-area-inset-top)+1rem)] sm:px-10 md:overflow-hidden md:py-5 lg:px-16"
+      aria-labelledby="island-title"
+    >
       <div className="island-aurora absolute inset-0" />
       <div className="island-sea absolute inset-x-0 bottom-0 h-[68%]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(3,6,14,0.58)_88%)]" />
 
-      <nav className="absolute right-5 top-5 z-20 flex gap-2 sm:right-10 sm:top-8" aria-label="页面入口">
+      <nav className="relative z-20 mb-8 ml-auto flex justify-end gap-2 md:absolute md:right-10 md:top-8 md:mb-0" aria-label="页面入口">
         <button type="button" className="flo-interactive rounded-full border border-white/10 bg-white/[0.025] px-4 py-2 text-xs text-flo-foam/68 outline-none" onClick={onOpenOpening}>
           Opening
         </button>
@@ -155,11 +159,11 @@ export function IslandScene({ selectedProductId, onSelectProduct, onOpenAbout, o
         </button>
       </nav>
 
-      <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl flex-col pt-14 sm:pt-16">
+      <div className="relative z-10 mx-auto flex min-h-full w-full max-w-7xl flex-col md:h-full md:pt-16">
         <div className="flex shrink-0 flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="flo-kicker mb-3 sm:mb-5">Island / 浮屿海面</p>
-            <h2 id="island-title" className="fog-reveal max-w-2xl text-2xl font-medium leading-tight text-flo-foam min-[390px]:text-3xl sm:text-5xl lg:text-6xl">
+            <h2 id="island-title" className="fog-reveal max-w-2xl text-[2.15rem] font-medium leading-tight text-flo-foam min-[390px]:text-[2.55rem] sm:text-5xl lg:text-6xl">
               FLO 的产品，漂浮在同一片深夜海面。
             </h2>
           </div>
@@ -205,7 +209,7 @@ export function IslandScene({ selectedProductId, onSelectProduct, onOpenAbout, o
           ))}
         </div>
 
-        <div className="mt-5 grid min-h-0 flex-1 gap-2 overflow-hidden md:hidden">
+        <div className="mt-5 grid min-h-0 flex-1 gap-3 md:hidden">
           {floProducts.map((product) => (
             <MobileIslandButton
               key={product.id}

@@ -65,11 +65,15 @@ export function AboutSection({ onBackToSea }: AboutSectionProps) {
   };
 
   return (
-    <section id="about-section" className="about-section relative h-[100svh] overflow-hidden px-5 py-5 sm:px-10 lg:px-16" aria-labelledby="about-title">
+    <section
+      id="about-section"
+      className="about-section relative h-[100dvh] overflow-y-auto px-5 pb-[calc(env(safe-area-inset-bottom)+1.5rem)] pt-[calc(env(safe-area-inset-top)+1rem)] sm:px-10 md:overflow-hidden md:py-5 lg:px-16"
+      aria-labelledby="about-title"
+    >
       <div className="about-glow pointer-events-none absolute inset-0" />
       <button
         type="button"
-        className="flo-interactive absolute left-5 top-5 z-20 rounded-full border border-white/10 bg-white/[0.025] px-4 py-2 text-xs text-flo-foam/72 outline-none sm:left-10 sm:top-8 sm:text-sm"
+        className="flo-interactive relative z-20 mb-5 rounded-full border border-white/10 bg-white/[0.025] px-4 py-2 text-xs text-flo-foam/72 outline-none md:absolute md:left-10 md:top-8 md:mb-0 md:text-sm"
         onClick={onBackToSea}
       >
         返回海面
@@ -88,27 +92,27 @@ export function AboutSection({ onBackToSea }: AboutSectionProps) {
         ) : null}
       </AnimatePresence>
 
-      <div className="relative z-10 mx-auto grid h-full w-full max-w-6xl content-center gap-7 pt-12 lg:grid-cols-[0.9fr_0.82fr] lg:items-end lg:gap-12 lg:pt-0">
+      <div className="relative z-10 mx-auto grid min-h-full w-full max-w-6xl content-start gap-5 md:h-full md:content-center md:gap-7 md:pt-12 lg:grid-cols-[0.9fr_0.82fr] lg:items-end lg:gap-12 lg:pt-0">
         <div className="max-w-2xl">
-          <p className="flo-kicker mb-5">About / 产品哲学</p>
-          <h2 id="about-title" className="fog-reveal max-w-2xl text-3xl font-medium leading-tight text-flo-foam sm:text-5xl lg:text-6xl">
+          <p className="flo-kicker mb-4 md:mb-5">About / 产品哲学</p>
+          <h2 id="about-title" className="fog-reveal max-w-2xl text-[2.35rem] font-medium leading-tight text-flo-foam min-[390px]:text-[2.65rem] sm:text-5xl lg:text-6xl">
             技术不只应该更强大，也应该更温柔。
           </h2>
-          <div className="mt-6 flex flex-wrap gap-2">
+          <div className="mt-5 flex flex-wrap gap-2 md:mt-6">
             {identities.map((identity) => (
               <span key={identity} className="rounded-full border border-white/10 bg-white/[0.018] px-3 py-1.5 text-xs text-flo-foam/70 sm:px-4 sm:py-2 sm:text-sm">
                 {identity}
               </span>
             ))}
           </div>
-          <div className="mt-7 text-sm leading-7 text-flo-foam/50">
+          <div className="mt-5 text-sm leading-7 text-flo-foam/50 md:mt-7">
             <p>FLO — Emotional products for the digital age.</p>
             <p className="text-flo-glow/70">所有灵感，终会靠岸。</p>
           </div>
         </div>
 
         <div>
-          <div className="fog-reveal space-y-4 text-base leading-8 text-flo-foam/72 sm:text-lg sm:leading-9">
+          <div className="fog-reveal space-y-3 text-base leading-8 text-flo-foam/72 md:space-y-4 md:text-lg md:leading-9">
             <p>
               我是一名产品经理，
               <br />
@@ -122,15 +126,15 @@ export function AboutSection({ onBackToSea }: AboutSectionProps) {
             <p className="text-flo-glow/82">于是，慢慢有了 FLO。</p>
           </div>
 
-          <div className="mt-7 grid grid-cols-2 gap-2 sm:gap-3">
+          <div className="mt-5 grid grid-cols-2 gap-2 sm:gap-3 md:mt-7">
             {contacts.map((contact) => (
               <button
                 key={contact.label}
                 type="button"
-                className="flo-panel flo-interactive flex items-center gap-3 rounded-lg p-3 text-left outline-none sm:p-4"
+                className="flo-panel flo-interactive flex min-w-0 items-center gap-2 rounded-lg p-2.5 text-left outline-none min-[390px]:gap-3 min-[390px]:p-3 sm:p-4"
                 onClick={() => copyContact(contact.label, contact.value)}
               >
-                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.025] text-flo-aura/82">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.025] text-flo-aura/82 min-[390px]:h-9 min-[390px]:w-9">
                   <ContactIcon icon={contact.icon} />
                 </span>
                 <span className="min-w-0">

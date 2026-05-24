@@ -104,7 +104,7 @@ export function ProductField({ selectedProductId, onBack }: ProductFieldProps) {
   return (
     <motion.section
       id="product-field"
-      className="product-field relative h-[100svh] overflow-hidden px-5 py-5 sm:px-10 lg:px-16"
+      className="product-field relative h-[100dvh] overflow-y-auto px-5 pb-[calc(env(safe-area-inset-bottom)+1.5rem)] pt-[calc(env(safe-area-inset-top)+1rem)] sm:px-10 md:overflow-hidden md:py-5 lg:px-16"
       aria-labelledby="product-field-title"
       initial={{ opacity: 0, filter: "blur(24px)", scale: 1.035 }}
       animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
@@ -146,7 +146,7 @@ export function ProductField({ selectedProductId, onBack }: ProductFieldProps) {
 
       <motion.button
         type="button"
-        className="flo-interactive absolute left-5 top-5 z-20 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs text-flo-foam/72 outline-none backdrop-blur-md sm:left-10 sm:top-8 sm:text-sm"
+        className="flo-interactive relative z-20 mb-5 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs text-flo-foam/72 outline-none backdrop-blur-md md:absolute md:left-10 md:top-8 md:mb-0 md:text-sm"
         onClick={onBack}
         aria-label="返回浮屿海面"
         whileTap={{ scale: 0.98 }}
@@ -154,14 +154,14 @@ export function ProductField({ selectedProductId, onBack }: ProductFieldProps) {
         返回海面
       </motion.button>
 
-      <div className="relative z-10 mx-auto grid h-full w-full max-w-6xl content-center gap-5 pt-11 lg:grid-cols-[0.96fr_0.72fr] lg:items-center lg:gap-10 lg:pt-0">
+      <div className="relative z-10 mx-auto grid min-h-full w-full max-w-6xl content-start gap-5 md:h-full md:content-center md:pt-11 lg:grid-cols-[0.96fr_0.72fr] lg:items-center lg:gap-10 lg:pt-0">
         <motion.div
           initial={{ opacity: 0, y: 24, filter: "blur(14px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1.15, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="flo-kicker mb-3 sm:mb-6">Product Field / {selectedProduct.concept}</p>
-          <h2 id="product-field-title" className="text-[clamp(2.8rem,11vw,8rem)] font-medium leading-[0.9] text-flo-foam">
+          <h2 id="product-field-title" className="text-[clamp(2.7rem,18vw,8rem)] font-medium leading-[0.9] text-flo-foam md:text-[clamp(2.8rem,11vw,8rem)]">
             {selectedProduct.name}
           </h2>
           <p className="mt-2 text-base text-flo-aura sm:mt-3 sm:text-xl">{selectedProduct.concept}</p>
@@ -191,7 +191,7 @@ export function ProductField({ selectedProductId, onBack }: ProductFieldProps) {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-2 gap-2 lg:grid-cols-1 xl:grid-cols-2"
+          className="grid grid-cols-2 gap-2 pb-1 lg:grid-cols-1 xl:grid-cols-2"
           initial={{ opacity: 0, y: 22, filter: "blur(14px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1.15, delay: 0.42, ease: [0.22, 1, 0.36, 1] }}

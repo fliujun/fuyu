@@ -1,0 +1,20 @@
+:root {
+  --flo-abyss-950: #0b1020;
+  --flo-abyss-900: #0f172a;
+  --flo-abyss-980: #111827;
+
+  --flo-aura: #89aee6;
+  --flo-aura-soft: #7da7d9;
+  --flo-aura-bright: #94b8ff;
+
+  --flo-glow: #f4d58d;
+  --flo-glow-soft: #e6c27a;
+  --flo-glow-bright: #ffc857;
+
+  --flo-mist: #7c6ee6;
+  --flo-mist-soft: #8b7dff;
+  --flo-mist-deep: #6e67d8;
+
+  --flo-foam: #ecf3ff;
+  --flo-muted: #9ba8bd;
+}

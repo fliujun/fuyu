@@ -1,0 +1,315 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+:root {
+  color-scheme: dark;
+  --background: var(--flo-abyss-950);
+  --foreground: var(--flo-foam);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-flo-abyss-900: var(--flo-abyss-900);
+  --color-flo-abyss-950: var(--flo-abyss-950);
+  --color-flo-abyss-980: var(--flo-abyss-980);
+  --color-flo-aura: var(--flo-aura);
+  --color-flo-aura-soft: var(--flo-aura-soft);
+  --color-flo-aura-bright: var(--flo-aura-bright);
+  --color-flo-glow: var(--flo-glow);
+  --color-flo-glow-soft: var(--flo-glow-soft);
+  --color-flo-glow-bright: var(--flo-glow-bright);
+  --color-flo-mist: var(--flo-mist);
+  --color-flo-mist-soft: var(--flo-mist-soft);
+  --color-flo-mist-deep: var(--flo-mist-deep);
+  --color-flo-foam: var(--flo-foam);
+  --color-flo-muted: var(--flo-muted);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  background: var(--background);
+  overflow: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", sans-serif;
+  height: 100%;
+  overflow: hidden;
+  letter-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.flo-shell {
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at 18% 12%, rgb(137 174 230 / 14%), transparent 34rem),
+    radial-gradient(circle at 82% 18%, rgb(124 110 230 / 10%), transparent 30rem),
+    linear-gradient(180deg, var(--flo-abyss-950), var(--flo-abyss-900) 58%, var(--flo-abyss-980));
+}
+
+.flo-section {
+  position: relative;
+  min-height: 100svh;
+  padding: clamp(5.5rem, 9vw, 8.5rem) clamp(1.25rem, 5vw, 5rem);
+}
+
+.flo-container {
+  width: min(100%, 1120px);
+  margin-inline: auto;
+}
+
+.flo-kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgb(244 213 141 / 72%);
+}
+
+.flo-heading {
+  max-width: 12ch;
+  font-size: clamp(3.5rem, 12vw, 9rem);
+  line-height: 0.95;
+  font-weight: 500;
+}
+
+.flo-body {
+  max-width: 36rem;
+  color: rgb(236 243 255 / 72%);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  line-height: 2;
+}
+
+.flo-panel {
+  border: 1px solid rgb(255 255 255 / 0.075);
+  background: rgb(255 255 255 / 0.024);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.035);
+}
+
+.flo-interactive {
+  transition:
+    border-color 600ms ease,
+    background-color 600ms ease,
+    color 600ms ease,
+    opacity 600ms ease,
+    transform 600ms ease,
+    box-shadow 600ms ease;
+}
+
+.flo-interactive:hover,
+.flo-interactive:focus-visible {
+  border-color: rgb(137 174 230 / 0.32);
+  background-color: rgb(137 174 230 / 0.045);
+  box-shadow: 0 0 32px rgb(137 174 230 / 0.08);
+}
+
+.fog-reveal {
+  animation: fog-reveal 1200ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.opening-aurora {
+  background:
+    radial-gradient(circle at 18% 24%, rgb(137 174 230 / 0.14), transparent 28rem),
+    radial-gradient(circle at 72% 20%, rgb(124 110 230 / 0.08), transparent 32rem),
+    radial-gradient(circle at 50% 76%, rgb(244 213 141 / 0.045), transparent 26rem),
+    linear-gradient(180deg, #070b16 0%, var(--flo-abyss-950) 52%, #060914 100%);
+  background-size: 130% 130%;
+}
+
+.opening-vignette {
+  background:
+    radial-gradient(circle at center, transparent 0%, rgb(3 6 14 / 18%) 46%, rgb(3 6 14 / 72%) 100%),
+    linear-gradient(90deg, rgb(3 6 14 / 56%), transparent 28%, transparent 72%, rgb(3 6 14 / 56%));
+}
+
+.opening-sea {
+  background:
+    repeating-linear-gradient(
+      178deg,
+      rgb(137 174 230 / 0.08) 0,
+      rgb(137 174 230 / 0.08) 1px,
+      transparent 1px,
+      transparent 18px
+    ),
+    linear-gradient(180deg, transparent, rgb(137 174 230 / 0.08) 48%, rgb(3 6 14 / 0.76));
+  mask-image: linear-gradient(180deg, transparent 0%, black 34%);
+}
+
+.island-section {
+  background:
+    radial-gradient(circle at 48% 18%, rgb(244 213 141 / 0.045), transparent 24rem),
+    linear-gradient(180deg, #070b16 0%, var(--flo-abyss-950) 46%, #050814 100%);
+}
+
+.island-aurora {
+  background:
+    radial-gradient(circle at 22% 32%, rgb(137 174 230 / 0.13), transparent 30rem),
+    radial-gradient(circle at 82% 38%, rgb(124 110 230 / 0.075), transparent 28rem),
+    radial-gradient(circle at 52% 72%, rgb(244 213 141 / 0.04), transparent 24rem);
+  background-size: 140% 140%;
+  animation: island-aurora-drift 32s ease-in-out infinite;
+}
+
+.island-sea {
+  background:
+    repeating-linear-gradient(
+      176deg,
+      rgb(137 174 230 / 0.055) 0,
+      rgb(137 174 230 / 0.055) 1px,
+      transparent 1px,
+      transparent 22px
+    ),
+    radial-gradient(ellipse at 50% 68%, rgb(137 174 230 / 0.12), transparent 58%),
+    linear-gradient(180deg, transparent, rgb(3 6 14 / 0.8));
+  mask-image: linear-gradient(180deg, transparent 0%, black 24%);
+}
+
+@keyframes island-aurora-drift {
+  0%,
+  100% {
+    background-position: 0% 48%;
+  }
+
+  50% {
+    background-position: 100% 52%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .island-aurora {
+    animation: none;
+  }
+}
+
+.product-field {
+  background:
+    radial-gradient(circle at 48% 32%, rgb(255 255 255 / 0.05), transparent 28rem),
+    linear-gradient(180deg, #070b16 0%, var(--flo-abyss-950) 100%);
+}
+
+.product-field-aurora {
+  background:
+    radial-gradient(circle at 24% 30%, color-mix(in srgb, var(--field-aura) 36%, transparent), transparent 30rem),
+    radial-gradient(circle at 72% 26%, color-mix(in srgb, var(--field-glow) 18%, transparent), transparent 28rem),
+    radial-gradient(circle at 52% 78%, color-mix(in srgb, var(--field-mist) 18%, transparent), transparent 30rem),
+    linear-gradient(180deg, rgb(7 11 22 / 0.98), rgb(11 16 32 / 0.92));
+  background-size: 140% 140%;
+}
+
+.product-field-sea {
+  background:
+    repeating-linear-gradient(
+      177deg,
+      color-mix(in srgb, var(--field-aura) 13%, transparent) 0,
+      color-mix(in srgb, var(--field-aura) 13%, transparent) 1px,
+      transparent 1px,
+      transparent 24px
+    ),
+    linear-gradient(180deg, transparent, rgb(3 6 14 / 0.78));
+  mask-image: linear-gradient(180deg, transparent 0%, black 30%);
+}
+
+.product-field-grain {
+  background-image:
+    radial-gradient(circle at 20% 30%, rgb(255 255 255 / 0.055) 0 1px, transparent 1px),
+    radial-gradient(circle at 80% 64%, rgb(244 213 141 / 0.035) 0 1px, transparent 1px);
+  background-size: 42px 42px, 58px 58px;
+}
+
+.about-section {
+  background:
+    radial-gradient(circle at 24% 24%, rgb(137 174 230 / 0.075), transparent 28rem),
+    radial-gradient(circle at 78% 72%, rgb(244 213 141 / 0.035), transparent 24rem),
+    linear-gradient(180deg, var(--flo-abyss-950), #070b16 100%);
+}
+
+.about-glow {
+  background:
+    radial-gradient(circle at 16% 78%, rgb(244 213 141 / 0.06), transparent 22rem),
+    radial-gradient(circle at 68% 18%, rgb(124 110 230 / 0.08), transparent 26rem);
+}
+
+.footer-glow {
+  background:
+    radial-gradient(circle at 50% 0%, rgb(244 213 141 / 0.08), transparent 20rem),
+    #050814;
+}
+
+.contact-mask {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: currentColor;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.contact-mask-wechat {
+  -webkit-mask-image: url("/icons/wechat.svg");
+  mask-image: url("/icons/wechat.svg");
+}
+
+.contact-mask-xiaohongshu {
+  width: 1.55rem;
+  -webkit-mask-image: url("/icons/xiaohongshu.svg");
+  mask-image: url("/icons/xiaohongshu.svg");
+}
+
+@keyframes fog-reveal {
+  from {
+    opacity: 0;
+    filter: blur(14px);
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .flo-section {
+    min-height: 100svh;
+    padding-block: 5rem;
+  }
+
+  .flo-kicker {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

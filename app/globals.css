@@ -58,6 +58,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+button {
+  cursor: pointer;
+}
+
 .flo-shell {
   min-height: 100svh;
   background:
@@ -116,9 +120,24 @@ a {
 
 .flo-interactive:hover,
 .flo-interactive:focus-visible {
-  border-color: rgb(137 174 230 / 0.32);
-  background-color: rgb(137 174 230 / 0.045);
-  box-shadow: 0 0 32px rgb(137 174 230 / 0.08);
+  border-color: rgb(137 174 230 / 0.48);
+  background-color: rgb(137 174 230 / 0.06);
+  color: rgb(236 243 255 / 0.95);
+  box-shadow:
+    0 0 0 1px rgb(137 174 230 / 0.08),
+    0 0 34px rgb(137 174 230 / 0.14),
+    inset 0 1px 0 rgb(255 255 255 / 0.06);
+  transform: translateY(-1px);
+}
+
+.flo-interactive:active {
+  border-color: rgb(244 213 141 / 0.38);
+  background-color: rgb(244 213 141 / 0.07);
+  box-shadow:
+    0 0 42px rgb(244 213 141 / 0.13),
+    inset 0 0 18px rgb(137 174 230 / 0.08);
+  transform: translateY(0) scale(0.985);
+  transition-duration: 160ms;
 }
 
 .fog-reveal {
@@ -151,6 +170,44 @@ a {
     ),
     linear-gradient(180deg, transparent, rgb(137 174 230 / 0.08) 48%, rgb(3 6 14 / 0.76));
   mask-image: linear-gradient(180deg, transparent 0%, black 34%);
+}
+
+.opening-enter-button {
+  position: relative;
+  isolation: isolate;
+}
+
+.opening-enter-button::before,
+.opening-enter-button::after {
+  content: "";
+  position: absolute;
+  inset: -0.42rem;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.opening-enter-button::before {
+  border: 1px solid rgb(137 174 230 / 0.24);
+  animation: opening-button-orbit 3.2s ease-in-out infinite;
+}
+
+.opening-enter-button::after {
+  background:
+    radial-gradient(circle at 50% 50%, rgb(244 213 141 / 0.12), transparent 54%),
+    radial-gradient(circle at 50% 50%, rgb(137 174 230 / 0.18), transparent 68%);
+  filter: blur(10px);
+  opacity: 0.64;
+  animation: opening-button-glow 3.2s ease-in-out infinite;
+}
+
+.opening-enter-button:active::before {
+  animation-duration: 520ms;
+}
+
+.opening-enter-button:active::after {
+  opacity: 0.95;
+  filter: blur(14px);
 }
 
 .island-section {
@@ -193,8 +250,36 @@ a {
   }
 }
 
+@keyframes opening-button-orbit {
+  0%,
+  100% {
+    opacity: 0.38;
+    transform: scale(0.98);
+  }
+
+  50% {
+    opacity: 0.86;
+    transform: scale(1.12);
+  }
+}
+
+@keyframes opening-button-glow {
+  0%,
+  100% {
+    opacity: 0.34;
+    transform: scale(0.96);
+  }
+
+  50% {
+    opacity: 0.88;
+    transform: scale(1.18);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .island-aurora {
+  .island-aurora,
+  .opening-enter-button::before,
+  .opening-enter-button::after {
     animation: none;
   }
 }

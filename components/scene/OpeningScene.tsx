@@ -165,8 +165,17 @@ export function OpeningScene({ onEnterSea }: OpeningSceneProps) {
           </motion.p>
           <motion.button
             type="button"
-            className="flo-interactive mt-5 rounded-full border border-flo-aura/24 bg-white/[0.025] px-5 py-3 text-sm text-flo-foam/82 shadow-[0_0_0_rgba(137,174,230,0)] outline-none"
+            className="flo-interactive opening-enter-button mt-5 rounded-full border border-flo-aura/32 bg-white/[0.035] px-6 py-3.5 text-sm text-flo-foam/90 shadow-[0_0_0_rgba(137,174,230,0)] outline-none backdrop-blur-md"
             onClick={enterSea}
+            whileHover={prefersReducedMotion ? undefined : { scale: 1.035 }}
+            whileTap={
+              prefersReducedMotion
+                ? undefined
+                : {
+                    scale: 0.95,
+                    filter: "brightness(1.16)",
+                  }
+            }
             initial={{ opacity: 0, y: 12 }}
             animate={
               prefersReducedMotion
@@ -174,19 +183,21 @@ export function OpeningScene({ onEnterSea }: OpeningSceneProps) {
                 : {
                     opacity: 1,
                     y: 0,
-                    borderColor: ["rgba(137,174,230,0.24)", "rgba(137,174,230,0.48)", "rgba(137,174,230,0.24)"],
+                    borderColor: ["rgba(137,174,230,0.32)", "rgba(244,213,141,0.54)", "rgba(137,174,230,0.38)"],
+                    backgroundColor: ["rgba(255,255,255,0.035)", "rgba(137,174,230,0.09)", "rgba(255,255,255,0.04)"],
                     boxShadow: [
-                      "0 0 0 rgba(137,174,230,0)",
-                      "0 0 34px rgba(137,174,230,0.16)",
-                      "0 0 0 rgba(137,174,230,0)",
+                      "0 0 14px rgba(137,174,230,0.08)",
+                      "0 0 46px rgba(137,174,230,0.28), 0 0 20px rgba(244,213,141,0.15)",
+                      "0 0 18px rgba(137,174,230,0.11)",
                     ],
                   }
             }
             transition={{
               opacity: { delay: prefersReducedMotion ? 0.3 : floDelay + 1.05, duration: 1 },
               y: { delay: prefersReducedMotion ? 0.3 : floDelay + 1.05, duration: 1 },
-              borderColor: { delay: floDelay + 1.2, duration: 3.8, repeat: Infinity, ease: "easeInOut" },
-              boxShadow: { delay: floDelay + 1.2, duration: 3.8, repeat: Infinity, ease: "easeInOut" },
+              borderColor: { delay: floDelay + 1.2, duration: 3.2, repeat: Infinity, ease: "easeInOut" },
+              backgroundColor: { delay: floDelay + 1.2, duration: 3.2, repeat: Infinity, ease: "easeInOut" },
+              boxShadow: { delay: floDelay + 1.2, duration: 3.2, repeat: Infinity, ease: "easeInOut" },
             }}
           >
             进入海面

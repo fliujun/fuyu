@@ -1,0 +1,864 @@
+/* Scoped copy of versions/flo-universe-clear/app/globals.css for the root /flo-universe route. */
+.flo-clear-page {
+  color-scheme: light;
+  --bg: #f7fbff;
+  --bg-strong: #eef8ff;
+  --surface: #ffffff;
+  --surface-soft: rgba(255, 255, 255, 0.74);
+  --text: #122033;
+  --muted: #607086;
+  --line: rgba(29, 72, 112, 0.13);
+  --blue: #1d7afc;
+  --blue-deep: #0f4fc7;
+  --cyan: #22bdd2;
+  --green: #34c78f;
+  --yellow: #ffd166;
+  --violet: #8878ff;
+  --shadow: 0 24px 80px rgba(39, 103, 164, 0.14);
+  --radius: 24px;
+}
+
+.flo-clear-page * {
+  box-sizing: border-box;
+}
+
+.flo-clear-page {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.flo-clear-page {
+  position: fixed;
+  inset: 0;
+  min-height: 100svh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(53, 201, 212, 0.18), transparent 34rem),
+    radial-gradient(circle at 86% 4%, rgba(255, 209, 102, 0.22), transparent 28rem),
+    linear-gradient(180deg, #f8fcff 0%, #edf8ff 48%, #ffffff 100%);
+  color: var(--text);
+  font-family:
+    Arial,
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    sans-serif;
+  letter-spacing: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.flo-clear-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.flo-clear-page button, .flo-clear-page a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.flo-clear-page button {
+  font: inherit;
+}
+
+.flo-clear-page main {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.flo-clear-page .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(1120px, calc(100% - 32px));
+  margin: 16px auto 0;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 10px 40px rgba(50, 101, 143, 0.1);
+  backdrop-filter: blur(18px);
+}
+
+.flo-clear-page .brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.flo-clear-page .brand-symbol {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  color: white;
+  font-weight: 800;
+}
+
+.flo-clear-page .brand-mark strong, .flo-clear-page .brand-mark small {
+  display: block;
+}
+
+.flo-clear-page .brand-mark strong {
+  font-size: 0.98rem;
+}
+
+.flo-clear-page .brand-mark small {
+  color: var(--muted);
+  font-size: 0.72rem;
+  margin-top: 1px;
+}
+
+.flo-clear-page .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.flo-clear-page .nav-links a {
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  padding: 10px 12px;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.flo-clear-page .nav-links a:hover, .flo-clear-page .nav-links a:focus-visible {
+  background: rgba(29, 122, 252, 0.09);
+  color: var(--blue-deep);
+  outline: none;
+}
+
+.flo-clear-page .section-shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: clamp(72px, 9vw, 112px) 0;
+}
+
+.flo-clear-page .hero-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+  gap: clamp(28px, 6vw, 72px);
+  align-items: center;
+  min-height: calc(100svh - 64px);
+  padding-top: clamp(56px, 7vw, 96px);
+}
+
+.flo-clear-page .eyebrow {
+  color: var(--blue-deep);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
+.flo-clear-page h1, .flo-clear-page h2, .flo-clear-page h3, .flo-clear-page p {
+  margin-top: 0;
+}
+
+.flo-clear-page h1 {
+  font-size: clamp(3.1rem, 7.2vw, 5.8rem);
+  line-height: 0.98;
+  letter-spacing: 0;
+  margin-bottom: 24px;
+  overflow-wrap: anywhere;
+}
+
+.flo-clear-page h2 {
+  font-size: clamp(2.15rem, 5vw, 4.1rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+  margin-bottom: 16px;
+  overflow-wrap: anywhere;
+}
+
+.flo-clear-page h3 {
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.flo-clear-page .hero-subtitle, .flo-clear-page .section-heading p, .flo-clear-page .surface-content p, .flo-clear-page .product-card p, .flo-clear-page .about-copy p, .flo-clear-page .install-heading p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.flo-clear-page .hero-subtitle {
+  max-width: 620px;
+  font-size: clamp(1.08rem, 2vw, 1.28rem);
+}
+
+.flo-clear-page .hero-actions, .flo-clear-page .card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.flo-clear-page .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border-radius: 999px;
+  font-weight: 800;
+  padding: 0 20px;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.flo-clear-page .button:hover, .flo-clear-page .button:focus-visible {
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.flo-clear-page .button-primary {
+  background: linear-gradient(135deg, var(--blue), var(--blue-deep));
+  box-shadow: 0 16px 34px rgba(29, 122, 252, 0.28);
+  color: white;
+}
+
+.flo-clear-page .button-secondary {
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 30px rgba(39, 103, 164, 0.1);
+  color: var(--blue-deep);
+}
+
+.flo-clear-page .button-small {
+  min-height: 40px;
+  background: var(--text);
+  color: white;
+  font-size: 0.92rem;
+  padding: 0 15px;
+}
+
+.flo-clear-page .button-ghost {
+  background: rgba(29, 122, 252, 0.08);
+  color: var(--blue-deep);
+}
+
+.flo-clear-page .trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.flo-clear-page .trust-row span, .flo-clear-page .identity-tags span, .flo-clear-page .platform-row span, .flo-clear-page .status-pill {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+  padding: 8px 12px;
+}
+
+.flo-clear-page .product-preview {
+  position: relative;
+}
+
+.flo-clear-page .preview-window {
+  border: 1px solid rgba(29, 72, 112, 0.14);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 209, 102, 0.34), transparent 12rem),
+    radial-gradient(circle at 84% 22%, rgba(34, 189, 210, 0.26), transparent 14rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(237, 248, 255, 0.78));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  padding: 18px;
+}
+
+.flo-clear-page .preview-hero .preview-window {
+  min-height: 460px;
+}
+
+.flo-clear-page .window-bar {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 30px;
+}
+
+.flo-clear-page .window-bar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(96, 112, 134, 0.24);
+}
+
+.flo-clear-page .preview-hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.flo-clear-page .preview-hero small, .flo-clear-page .preview-hero strong {
+  display: block;
+}
+
+.flo-clear-page .preview-hero small {
+  color: var(--blue-deep);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.flo-clear-page .preview-hero strong {
+  max-width: 280px;
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  line-height: 1.2;
+}
+
+.flo-clear-page .time-chip {
+  border-radius: 999px;
+  background: rgba(18, 32, 51, 0.08);
+  color: var(--text);
+  font-weight: 800;
+  padding: 8px 12px;
+}
+
+.flo-clear-page .shortcut-board {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.flo-clear-page .shortcut-board span {
+  display: grid;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(29, 72, 112, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.68);
+  color: var(--blue-deep);
+  font-weight: 900;
+  box-shadow: 0 12px 24px rgba(39, 103, 164, 0.08);
+}
+
+.flo-clear-page .widget-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.flo-clear-page .widget-row span {
+  min-height: 72px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--muted);
+  display: grid;
+  font-size: 0.9rem;
+  font-weight: 800;
+  place-items: center;
+}
+
+.flo-clear-page .floating-launcher {
+  position: absolute;
+  right: 22px;
+  bottom: -24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(29, 72, 112, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 16px 40px rgba(39, 103, 164, 0.16);
+  padding: 12px 14px;
+}
+
+.flo-clear-page .floating-launcher strong {
+  border-radius: 10px;
+  background: var(--text);
+  color: white;
+  padding: 8px 10px;
+}
+
+.flo-clear-page .floating-launcher span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.flo-clear-page .section-heading {
+  max-width: 760px;
+  margin-bottom: 34px;
+}
+
+.flo-clear-page .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.flo-clear-page .feature-card, .flo-clear-page .surface-card, .flo-clear-page .product-card, .flo-clear-page .download-panel, .flo-clear-page .steps-panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-soft);
+  box-shadow: 0 16px 48px rgba(39, 103, 164, 0.09);
+  backdrop-filter: blur(16px);
+}
+
+.flo-clear-page .feature-card {
+  min-height: 148px;
+  padding: 20px;
+}
+
+.flo-clear-page .feature-dot {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue), var(--green));
+  margin-bottom: 24px;
+}
+
+.flo-clear-page .surface-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.flo-clear-page .surface-card {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.82fr) minmax(0, 1.18fr);
+  gap: 28px;
+  padding: 18px;
+}
+
+.flo-clear-page .surface-media {
+  min-height: 292px;
+}
+
+.flo-clear-page .surface-media .preview-window, .flo-clear-page .preview-placeholder {
+  height: 100%;
+  min-height: 292px;
+}
+
+.flo-clear-page .preview-compact .preview-window {
+  box-shadow: none;
+}
+
+.flo-clear-page .preview-compact .floating-launcher {
+  display: none;
+}
+
+.flo-clear-page .preview-placeholder {
+  display: grid;
+  place-items: center;
+  border: 1px dashed rgba(29, 72, 112, 0.22);
+  border-radius: 20px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(238, 248, 255, 0.74)),
+    repeating-linear-gradient(
+      135deg,
+      rgba(29, 122, 252, 0.06) 0,
+      rgba(29, 122, 252, 0.06) 10px,
+      transparent 10px,
+      transparent 20px
+    );
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.flo-clear-page .surface-content {
+  padding: 6px 8px 8px 0;
+}
+
+.flo-clear-page .platform-label {
+  color: var(--blue-deep) !important;
+  font-size: 0.8rem !important;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.flo-clear-page .surface-content ul, .flo-clear-page .product-card ul {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+}
+
+.flo-clear-page .surface-content li, .flo-clear-page .product-card li {
+  color: var(--text);
+  line-height: 1.55;
+  padding-left: 18px;
+  position: relative;
+}
+
+.flo-clear-page .surface-content li::before, .flo-clear-page .product-card li::before {
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  content: "";
+}
+
+.flo-clear-page .matrix-shell {
+  display: grid;
+  gap: 22px;
+}
+
+.flo-clear-page .filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.flo-clear-page .filter-bar button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
+  cursor: pointer;
+  font-weight: 800;
+  padding: 10px 14px;
+}
+
+.flo-clear-page .filter-bar button.is-active, .flo-clear-page .filter-bar button:hover, .flo-clear-page .filter-bar button:focus-visible {
+  background: var(--blue);
+  color: white;
+  outline: none;
+}
+
+.flo-clear-page .product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.flo-clear-page .product-card {
+  min-height: 420px;
+  overflow: hidden;
+  padding: 22px;
+  position: relative;
+}
+
+.flo-clear-page .product-card::after {
+  position: absolute;
+  inset: auto -30px -64px auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(29, 122, 252, 0.16);
+  content: "";
+}
+
+.flo-clear-page .product-card.tone-cyan::after {
+  background: rgba(34, 189, 210, 0.18);
+}
+
+.flo-clear-page .product-card.tone-violet::after {
+  background: rgba(136, 120, 255, 0.17);
+}
+
+.flo-clear-page .product-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.flo-clear-page .product-card-top span, .flo-clear-page .product-card-top b {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.flo-clear-page .product-card-top b {
+  border-radius: 999px;
+  background: rgba(29, 122, 252, 0.08);
+  color: var(--blue-deep);
+  padding: 7px 10px;
+}
+
+.flo-clear-page .product-card h3 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.flo-clear-page .product-card h3 small {
+  color: var(--muted);
+  display: block;
+  font-size: 0.88rem;
+  margin-top: 4px;
+}
+
+.flo-clear-page .product-slogan {
+  color: var(--text) !important;
+  font-size: 1.1rem !important;
+  font-weight: 900;
+}
+
+.flo-clear-page .platform-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.flo-clear-page .install-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.84fr) minmax(0, 1.16fr);
+  gap: 18px;
+}
+
+.flo-clear-page .download-panel, .flo-clear-page .steps-panel {
+  padding: 16px;
+}
+
+.flo-clear-page .download-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-radius: 18px;
+  padding: 18px;
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.flo-clear-page .download-row + .download-row {
+  margin-top: 8px;
+}
+
+.flo-clear-page .download-row:hover, .flo-clear-page .download-row:focus-visible {
+  background: rgba(29, 122, 252, 0.08);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.flo-clear-page .download-row strong, .flo-clear-page .download-row small {
+  display: block;
+}
+
+.flo-clear-page .download-row small {
+  color: var(--muted);
+  line-height: 1.5;
+  margin-top: 5px;
+}
+
+.flo-clear-page .download-row b {
+  color: var(--blue-deep);
+  white-space: nowrap;
+}
+
+.flo-clear-page details {
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.flo-clear-page details + details {
+  margin-top: 8px;
+}
+
+.flo-clear-page details[open] {
+  background: rgba(29, 122, 252, 0.06);
+}
+
+.flo-clear-page summary {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-weight: 900;
+  gap: 10px;
+  list-style: none;
+}
+
+.flo-clear-page summary::-webkit-details-marker {
+  display: none;
+}
+
+.flo-clear-page summary span {
+  color: var(--blue-deep);
+  font-size: 0.8rem;
+}
+
+.flo-clear-page details p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 12px 0 0;
+}
+
+.flo-clear-page code {
+  display: block;
+  overflow-x: auto;
+  border-radius: 12px;
+  background: #122033;
+  color: #f7fbff;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  margin-top: 12px;
+  padding: 12px;
+  white-space: nowrap;
+}
+
+.flo-clear-page .about-section {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(28px, 6vw, 72px);
+}
+
+.flo-clear-page .about-copy {
+  border-left: 1px solid var(--line);
+  padding-left: clamp(24px, 4vw, 48px);
+}
+
+.flo-clear-page .identity-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.flo-clear-page .site-footer {
+  align-items: center;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 20px auto 0;
+  padding: 28px 0 36px;
+  width: min(1120px, calc(100% - 32px));
+}
+
+.flo-clear-page .site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.flo-clear-page .site-footer a:hover, .flo-clear-page .site-footer a:focus-visible {
+  color: var(--blue-deep);
+  outline: none;
+}
+
+@media (max-width: 920px) {
+  .flo-clear-page .hero-section, .flo-clear-page .surface-card, .flo-clear-page .install-layout, .flo-clear-page .about-section {
+    grid-template-columns: 1fr;
+  }
+
+  .flo-clear-page .hero-section {
+    min-height: auto;
+  }
+
+  .flo-clear-page .feature-grid, .flo-clear-page .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flo-clear-page .surface-content {
+    padding: 0;
+  }
+
+  .flo-clear-page .about-copy {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .flo-clear-page .site-header {
+    align-items: flex-start;
+    border-radius: 24px;
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .flo-clear-page .nav-links {
+    display: grid;
+    gap: 6px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .flo-clear-page .nav-links a {
+    background: rgba(29, 122, 252, 0.06);
+    font-size: 0.86rem;
+    padding: 10px 6px;
+    text-align: center;
+  }
+
+  .flo-clear-page .section-shell {
+    max-width: 1120px;
+    width: calc(100% - 24px);
+    padding: 64px 0;
+  }
+
+  .flo-clear-page h1 {
+    font-size: clamp(2.55rem, 12vw, 3.35rem);
+    line-height: 1.04;
+  }
+
+  .flo-clear-page h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .flo-clear-page .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .flo-clear-page .button {
+    width: 100%;
+  }
+
+  .flo-clear-page .preview-hero .preview-window {
+    min-height: 360px;
+  }
+
+  .flo-clear-page .shortcut-board {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .flo-clear-page .widget-row, .flo-clear-page .feature-grid, .flo-clear-page .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flo-clear-page .surface-card, .flo-clear-page .feature-card, .flo-clear-page .product-card, .flo-clear-page .download-panel, .flo-clear-page .steps-panel {
+    border-radius: 18px;
+    min-width: 0;
+  }
+
+  .flo-clear-page .surface-media, .flo-clear-page .surface-media .preview-window, .flo-clear-page .preview-placeholder {
+    min-height: 240px;
+  }
+
+  .flo-clear-page .download-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .flo-clear-page .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flo-clear-page *, .flo-clear-page *::before, .flo-clear-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

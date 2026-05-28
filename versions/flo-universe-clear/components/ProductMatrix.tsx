@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { platformFilters, type Product } from "@/data/products";
+import { platformFilters, type Product } from "../data/products";
 
 type ProductMatrixProps = {
   products: Product[];

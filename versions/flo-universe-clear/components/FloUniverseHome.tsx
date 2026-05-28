@@ -3,7 +3,7 @@ import {
   links,
   macInstallSteps,
   productMatrix,
-} from "@/data/products";
+} from "../data/products";
 import { ProductMatrix } from "./ProductMatrix";
 import { ProductPreview } from "./ProductPreview";
 
